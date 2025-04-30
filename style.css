@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: black;
     color: white;
     font-family: sans-serif;
@@ -10,8 +10,8 @@ html, body {
 .button {
     font-size: 256px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50dvh;
+    left: 50dvw;
     translate: -50% -50%;
     animation: do-the-thing 1s ease-in-out;
     opacity: 0;
@@ -22,4 +22,19 @@ html, body {
     0% {scale: 0;opacity:0;}
     5% {scale: 100%;opacity:1;}
     100% {scale: 0;opacity:0;}
+}
+
+input {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100vw;
+    background-color: black;
+    border: grey 2px solid;
+    outline: 0;
+    height: 2em;
+}
+
+input:focus-within {
+    border: yellow 2px solid;
+    outline: 0;
 }
