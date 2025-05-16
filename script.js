@@ -12,13 +12,20 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxT
 } else {
     window.addEventListener("keypress", (ev) => {
         showButton(ev.key);
+        console.log(ev)
     });
 }
 
 
 function showButton(key) {
     let newButtonEle = document.createElement("div");
-    newButtonEle.innerText = key
+    if (key == "Enter") {
+        newButtonEle.innerText = "enter";    
+    } else if (key == " ") {
+        newButtonEle.innerText = "space"
+    } else {
+        newButtonEle.innerText = key
+    }
     newButtonEle.className = "button"
     document.body.appendChild(newButtonEle)
     setTimeout(()=>{document.body.removeChild(newButtonEle)},1000)
