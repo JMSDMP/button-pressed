@@ -7,6 +7,10 @@ html, body {
     font-family: sans-serif;
 }
 
+:root {
+    --colour: yellow;
+}
+
 .button {
     font-size: 256px;
     position: absolute;
@@ -15,7 +19,7 @@ html, body {
     translate: -50% -50%;
     animation: do-the-thing 1s ease-in-out;
     opacity: 0;
-    text-shadow: 0 0 0.5em yellow;
+    text-shadow: 0 0 0.5em var(--colour);
 }
 
 @keyframes do-the-thing {
@@ -35,6 +39,6 @@ input {
 }
 
 input:focus-within {
-    border: yellow 2px solid;
+    border: var(--colour) 2px solid;
     outline: 0;
 }
